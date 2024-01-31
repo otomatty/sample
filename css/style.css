@@ -1,0 +1,358 @@
+html {
+  overflow: auto;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+a {
+  transition: 0.5s;
+}
+
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
+}
+.container {
+  max-width: 1188px;
+  padding: 0 4%;
+  margin: 0 auto;
+}
+/* sec space */
+.products,
+.about,
+.shop,
+.contact {
+  padding: 80px 0;
+}
+/* ttl */
+.ttl {
+  font-size: 30px;
+  padding-bottom: 25px;
+  margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+}
+.ttl::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background-color: var(--myOrange);
+}
+/* menu */
+.menu ul {
+  display: flex;
+}
+.menu li {
+  padding: 0 40px;
+}
+.menu a {
+  font-size: 20px;
+}
+.menu a:hover {
+  color: var(--myOrange);
+}
+/* header */
+header .menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+header .menu ul {
+  height: 80px;
+  align-items: center;
+}
+header .menu li:not(:last-of-type) {
+  border-right: solid 1px #fff;
+}
+header .menu a {
+  color: #fff;
+}
+/* kv */
+.kv {
+  position: relative;
+}
+.kv h1 {
+  position: absolute;
+  top: 145px;
+  left: 11%;
+  color: #fff;
+  font-size: 80px;
+  font-weight: 500;
+  z-index: 100;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.my-swiper img {
+  max-width: none;
+  width: 100%;
+  height: auto;
+}
+/* products */
+.products ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 0;
+  justify-content: center;
+}
+.products li {
+  width: 25%;
+  padding: 0 1%;
+}
+.products li p {
+  padding-top: 20px;
+  text-align: center;
+}
+/* about */
+.about {
+  background-image: url(../img/about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+.about h3 {
+  text-align: center;
+  font-size: 24px;
+}
+.about p {
+  font-size: 24px;
+  padding: 40px 0;
+  line-height: 133%;
+  width: 700px;
+  margin: 0 auto;
+}
+.btn {
+  display: block;
+  width: 300px;
+  height: 80px;
+  border: solid 1px #fff;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 80px;
+  position: relative;
+  z-index: 10;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--myOrange);
+  z-index: -1;
+  /* transform: scale(0, 1); */
+  transform-origin: left top;
+  transition: 0.5s;
+}
+.btn:hover::before {
+  transform: scale(1, 1);
+}
+.btn::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.btn:hover::after {
+  right: 30px;
+}
+/* shop */
+.shop iframe {
+  width: 100%;
+  height: 400px;
+}
+.shop p {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+.contact {
+  background-image: url(../img/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  margin-bottom: 80px;
+}
+.contact p {
+  text-align: center;
+  font-size: 30px;
+}
+.contact p:first-of-type {
+  padding-bottom: 40px;
+}
+.contact p a:hover {
+  color: var(--myOrange);
+}
+footer {
+  border-top: solid 1px #707070;
+  padding: 40px 0;
+  text-align: center;
+}
+footer p {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+footer .menu ul {
+  margin-bottom: 40px;
+  justify-content: center;
+}
+footer .menu li {
+  border-right: solid 1px #333;
+}
+footer small {
+  font-size: 14px;
+  display: block;
+}
+@media screen and (max-width: 750px) {
+  .sp {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+  /* spacer */
+  .products,
+  .about,
+  .shop,
+  .contact {
+    padding: 60px 0;
+  }
+  /* ttl */
+  .ttl {
+    margin-bottom: 40px;
+  }
+  .h-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+  }
+  .h-btn div {
+    width: calc(100% - 20px);
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .h-btn div span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    right: 0;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  .h-btn div span:first-of-type {
+    top: 19px;
+  }
+  .h-btn div span:last-of-type {
+    top: 30px;
+    width: 50%;
+  }
+  .h-btn.active div span {
+    top: 50%;
+  }
+  .h-btn.active div span:first-of-type {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .h-btn.active div span:last-of-type {
+    transform: translateY(-50%) rotate(-45deg);
+    width: 100%;
+  }
+  /* menu */
+  .menu ul {
+    flex-wrap: wrap;
+  }
+  .menu li {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .menu {
+    top: 50px;
+    height: calc(100vh - 50px);
+    width: 210px;
+    padding-top: 60px;
+    transform: translateX(100vw);
+    transition: 0.5s;
+  }
+  header .menu ul {
+    height: auto;
+    gap: 40px 0;
+  }
+  header .menu li:not(:last-of-type) {
+    border-right: transparent;
+  }
+  header .menu.active {
+    transform: translateX(0);
+  }
+  /* kv */
+  .kv h1 {
+    top: 66px;
+    left: 4%;
+    font-size: 40px;
+  }
+  /* product */
+  .products ul {
+    gap: 40px 0;
+  }
+  .products li {
+    width: 100%;
+  }
+  /* about */
+  .about {
+    background-image: url(../img/sp/about.jpg);
+  }
+  .about p {
+    width: 100%;
+    font-size: 16px;
+  }
+  /* shop */
+  .shop iframe {
+    height: 307px;
+  }
+  .shop p {
+    padding-top: 20px;
+    font-size: 16px;
+  }
+  /* contact */
+  .contact {
+    background-image: url(../img/sp/contact.jpg);
+    margin-bottom: 40px;
+  }
+  .contact p {
+    font-size: 20px;
+  }
+  .contact p:first-of-type {
+    padding-bottom: 20px;
+  }
+  /* footer */
+  footer .menu ul {
+    gap: 20px 0;
+  }
+  footer .menu li {
+    border-right: transparent;
+  }
+}
